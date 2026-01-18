@@ -11,62 +11,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      h1, h2, h3, h4, .font-poppins {
-        font-family: 'Poppins', sans-serif;
-      }
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, h4, .font-poppins { font-family: 'Poppins', sans-serif; }
       .bg-navy { background-color: #1a2332; }
       .text-navy { color: #1a2332; }
-      
-      /* Brand Red */
       .bg-innovation-orange { background-color: #FF0174; }
       .text-innovation-orange { color: #FF0174; }
       .border-innovation-orange { border-color: #FF0174; }
-      
-      /* Brand Blue */
       .bg-innovation-blue { background-color: #02B4E8; }
       .text-innovation-blue { color: #02B4E8; }
       .border-innovation-blue { border-color: #02B4E8; }
-      
-      /* Custom Filter for Image Branding Blue (#02B4E8) */
       .filter-blue-on-hover:hover {
         filter: invert(52%) sepia(82%) saturate(2487%) hue-rotate(162deg) brightness(101%) contrast(99%);
       }
-      
-      /* Glassmorphism */
       .glass {
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
-      
-      /* Smooth scrolling */
       html { scroll-behavior: smooth; }
-
-      /* Custom scrollbar for clean UI */
-      .custom-scrollbar::-webkit-scrollbar {
-        width: 6px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: rgba(26, 35, 50, 0.1);
-        border-radius: 10px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: rgba(26, 35, 50, 0.2);
-      }
+      .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(26, 35, 50, 0.1); border-radius: 10px; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(26, 35, 50, 0.2); }
     </style>
     <script>
-      // Shim process.env for the browser to prevent crashes when accessing API keys
-      window.process = {
-        env: {
-          API_KEY: "" // Vercel/builders will inject the actual key here if configured
-        }
+      // Crucial: define process and process.env before any other script loads
+      window.process = { 
+        env: { API_KEY: "" },
+        cwd: () => "/"
       };
+      // For libraries that check global
+      window.global = window;
     </script>
     <script type="importmap">
     {
@@ -76,6 +52,7 @@
         "react/": "https://esm.sh/react@^19.2.3/",
         "react": "https://esm.sh/react@^19.2.3",
         "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react-dom": "https://esm.sh/react-dom@^19.2.3",
         "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0"
       }
     }
@@ -83,7 +60,6 @@
   </head>
   <body class="bg-gray-50 text-gray-900">
     <div id="root"></div>
-    <!-- Entry point for the React application -->
     <script type="module" src="./index.tsx"></script>
   </body>
 </html>

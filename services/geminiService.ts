@@ -1,6 +1,6 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
-import { DEEP_SHIFT_KNOWLEDGE_BASE } from '../constants/knowledgeBase';
+import { DEEP_SHIFT_KNOWLEDGE_BASE } from '../constants/knowledgeBase.ts';
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 

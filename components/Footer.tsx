@@ -14,9 +14,9 @@ import {
   ArrowRight,
   Loader2
 } from 'lucide-react';
-import { NAV_LINKS } from '../constants';
-import { performSiteSearch } from '../services/geminiService';
-import SearchOverlay from './SearchOverlay';
+import { NAV_LINKS } from '../constants.tsx';
+import { performSiteSearch } from '../services/geminiService.ts';
+import SearchOverlay from './SearchOverlay.tsx';
 
 const Footer: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
