@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -17,9 +16,9 @@ import {
   Maximize2,
   X
 } from 'lucide-react';
-import { SERVICES, INDUSTRIES, INITIAL_TRAINING_POSTERS } from '../constants.tsx';
-import ImageCarousel from '../components/ImageCarousel.tsx';
-import TiktokCarousel from '../components/TiktokCarousel.tsx';
+import { SERVICES, INDUSTRIES, INITIAL_TRAINING_POSTERS } from '../constants';
+import ImageCarousel from '../components/ImageCarousel';
+import TiktokCarousel from '../components/TiktokCarousel';
 
 interface HeroSlide {
   id: number;

@@ -1,27 +1,26 @@
-
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar.tsx';
-import Footer from './components/Footer.tsx';
-import AssistantWidget from './components/AssistantWidget.tsx';
-import WhatsappButton from './components/WhatsappButton.tsx';
-import Home from './pages/Home.tsx';
-import Projects from './pages/Projects.tsx';
-import Contact from './pages/Contact.tsx';
-import Services from './pages/Services.tsx';
-import About from './pages/About.tsx';
-import Solutions from './pages/Solutions.tsx';
-import NewsEvents from './pages/NewsEvents.tsx';
-import NewsDetail from './pages/NewsDetail.tsx';
-import AdminDashboard from './pages/AdminDashboard.tsx';
-import PrivacyPolicy from './pages/PrivacyPolicy.tsx';
-import TermsOfService from './pages/TermsOfService.tsx';
-import Jobs from './pages/Jobs.tsx';
-import JobDetail from './pages/JobDetail.tsx';
-import Internships from './pages/Internships.tsx';
-import ApplyInternship from './pages/ApplyInternship.tsx';
-import ApplyJob from './pages/ApplyJob.tsx';
-import Training from './pages/Training.tsx';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import AssistantWidget from './components/AssistantWidget';
+import WhatsappButton from './components/WhatsappButton';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
+import About from './pages/About';
+import Solutions from './pages/Solutions';
+import NewsEvents from './pages/NewsEvents';
+import NewsDetail from './pages/NewsDetail';
+import AdminDashboard from './pages/AdminDashboard';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import Jobs from './pages/Jobs';
+import JobDetail from './pages/JobDetail';
+import Internships from './pages/Internships';
+import ApplyInternship from './pages/ApplyInternship';
+import ApplyJob from './pages/ApplyJob';
+import Training from './pages/Training';
 
 // Scroll to top on route change
 const ScrollToTop = () => {

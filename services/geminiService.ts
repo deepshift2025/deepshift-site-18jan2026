@@ -1,14 +1,12 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
-import { DEEP_SHIFT_KNOWLEDGE_BASE } from '../constants/knowledgeBase.ts';
-
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+import { DEEP_SHIFT_KNOWLEDGE_BASE } from '../constants/knowledgeBase';
 
 /**
  * Service to interact with the Google Gemini API for the Deep Shift Assistant.
  */
 export const getDeepShiftAssistantResponse = async (userMessage: string) => {
   try {
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     const systemInstruction = `
       You are the Deep Shift AI Lab Assistant, a professional and innovative digital representative of Deep Shift AI.
       Deep Shift AI is East Africa's leading provider of enterprise AI, automation, and local language NLP technology.
@@ -58,6 +56,7 @@ export const getDeepShiftAssistantResponse = async (userMessage: string) => {
  */
 export const performSiteSearch = async (query: string) => {
   try {
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: `Search query: "${query}"`,

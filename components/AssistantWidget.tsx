@@ -1,7 +1,6 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Send, User, Loader2, Sparkles, Bot, ShieldCheck, MessageCircle } from 'lucide-react';
-import { getDeepShiftAssistantResponse } from '../services/geminiService.ts';
+import { getDeepShiftAssistantResponse } from '../services/geminiService';
 
 const LOGO_URL = "https://i.postimg.cc/Mpsm3pDq/21.png";
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,27 +35,28 @@
       .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(26, 35, 50, 0.2); }
     </style>
     <script>
-      // Crucial: define process and process.env before any other script loads
+      // Global shim for process and env
       window.process = { 
         env: { API_KEY: "" },
-        cwd: () => "/"
+        cwd: () => "/",
+        browser: true
       };
-      // For libraries that check global
       window.global = window;
     </script>
     <script type="importmap">
-    {
-      "imports": {
-        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-        "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
-        "react/": "https://esm.sh/react@^19.2.3/",
-        "react": "https://esm.sh/react@^19.2.3",
-        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-        "react-dom": "https://esm.sh/react-dom@^19.2.3",
-        "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0"
-      }
-    }
-    </script>
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.28.0?external=react",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0?external=react",
+    "@google/genai": "https://esm.sh/@google/genai@1.3.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
   </head>
   <body class="bg-gray-50 text-gray-900">
     <div id="root"></div>
